@@ -1368,11 +1368,13 @@ function createSimplifiedOverlay() {
     container.appendChild(uiContainer);
 
     // Add the notification of premium if necessary
+    /*
     if((jrCount === 5
     || jrCount % 15 === 0)
     && jrCount < 151) {
         container.appendChild(addPremiumNofifier());
     }
+    */
 
     // Add MathJax support
     var mj = document.querySelector("script[src *= 'mathjax");
