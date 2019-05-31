@@ -455,6 +455,15 @@ function getArticleTitle() {
     return title;
 }
 
+function getArticleLang() {
+    var langElement = document.querySelector('[lang]')
+    if (langElement) {
+        return langElement.lang;
+    } else {
+        return null;
+    }
+}
+
 function getArticleAuthor() {
     // Make sure that the pageSelectedContainer isn't empty
     if(pageSelectedContainer == null)
@@ -1221,6 +1230,10 @@ function createSimplifiedOverlay() {
 
     // Get the title, author, etc.
     container.appendChild(addArticleMeta())
+    var lang = getArticleLang();
+    if (lang) {
+        container.lang = lang;
+    }
 
     // Set the text as our text
     var contentContainer = document.createElement("div");
