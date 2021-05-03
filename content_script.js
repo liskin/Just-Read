@@ -714,7 +714,7 @@ function getStyles() {
 
         // If the user has a version of the stylesheets and it is less than the current one, update it
         if(typeof versionResult === "undefined"
-        || versionResult['stylesheet-version'] < stylesheetVersion) {
+        || versionResult < stylesheetVersion) {
             chrome.storage.sync.set({'stylesheet-version': stylesheetVersion});
 
             needsUpdate = true;
@@ -1539,7 +1539,7 @@ function continueLoading() {
 /////////////////////////////////////
 var isPaused = false,
     stylesheetObj = {},
-    stylesheetVersion = 1.30; // THIS NUMBER MUST BE CHANGED FOR THE STYLESHEETS TO KNOW TO UPDATE
+    stylesheetVersion = 1.301; // THIS NUMBER MUST BE CHANGED FOR THE STYLESHEETS TO KNOW TO UPDATE
 
 function launch() {
     // Detect past overlay - don't show another
